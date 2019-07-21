@@ -1,0 +1,9 @@
+{
+    "spotify": {
+        "numberOfBestSongs": 3,
+        "locale": "DE"
+    },
+    "wiki": {
+        "cacheLifeTime": 3600000
+    }
+}
