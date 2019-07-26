@@ -19,6 +19,7 @@
         "wikijs": "^5.5.0"
     },
     "devDependencies": {
+        "dotenv": "^8.0.0",
         "nodemon": "^1.19.1",
         "ts-node": "^7.0.1",
         "tslint": "^5.11.0",
