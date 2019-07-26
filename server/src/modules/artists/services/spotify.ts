@@ -60,18 +60,23 @@ export default class SpotifyService {
      * @returns {Promise<ITrack[]>} - best songs
      */
     async getTopSongs(artistName: string): Promise<ITrack[]> {
-        await this.updateAccessToken();
-        const id = await this.getArtistId(artistName);
-        const response = await this.spotify.getArtistTopTracks(id, spotifyConfig.locale);
-        return get(response, ['body', 'tracks'], [])
-            .slice(0, spotifyConfig.numberOfBestSongs)
-            .map(track => ({
-                title: track.name,
-                spotifyLink: get(track, ['external_urls', 'spotify']),
-                albumCover: get(
-                    get(track, ['album', 'images'], [])[0],
-                    'url',
-                ),
-            }));
+        try {
+            await this.updateAccessToken();
+            const id = await this.getArtistId(artistName);
+            const response = await this.spotify.getArtistTopTracks(id, spotifyConfig.locale);
+            return get(response, ['body', 'tracks'], [])
+                .slice(0, spotifyConfig.numberOfBestSongs)
+                .map(track => ({
+                    title: track.name,
+                    spotifyLink: get(track, ['external_urls', 'spotify']),
+                    albumCover: get(
+                        get(track, ['album', 'images'], [])[0],
+                        'url',
+                    ),
+                }));
+        } catch (error) {
+            console.log(error);
+            return [];
+        }
     }
 }
