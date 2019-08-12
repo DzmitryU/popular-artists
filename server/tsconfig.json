@@ -1,18 +1,19 @@
 {
     "compilerOptions": {
         "module": "commonjs",
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
         "moduleResolution": "node",
         "pretty": true,
+        "resolveJsonModule": true,
         "sourceMap": true,
-        "target": "es6",
-        "outDir": "dist",
-        "resolveJsonModule": true
+        "target": "es6"
     },
     "include": [
         "src/**/*.ts"
     ],
     "exclude": [
-        "node_modules",
-        "src/test/**"
+        "node_modules"
     ]
 }

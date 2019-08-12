@@ -4,6 +4,6 @@
   "ignore": [
     "docs/*"
   ],
-  "exec": "ts-node src/server.ts",
+  "exec": "ts-node src/main.ts",
   "ext": "ts"
 }

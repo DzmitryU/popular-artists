@@ -3,17 +3,22 @@
     "version": "0.0.1",
     "description": "List of most pupular songs",
     "scripts": {
-        "start": "ts-node src/server.ts",
+        "start": "ts-node src/main.ts",
         "start:watch": "nodemon",
         "doc": "typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file"
     },
     "dependencies": {
+        "@nestjs/common": "^6.5.3",
+        "@nestjs/core": "^6.5.3",
+        "@nestjs/platform-express": "^6.5.3",
         "@types/node": "^12.6.8",
         "body-parser": "^1.19.0",
         "config": "^3.0.1",
         "cors": "^2.8.5",
         "express": "^4.16.3",
         "lodash": "^4.17.15",
+        "reflect-metadata": "^0.1.13",
+        "rxjs": "^6.5.2",
         "spotify-web-api-node": "^4.0.0",
         "typescript": "^3.2.2",
         "wikijs": "^5.5.0"
