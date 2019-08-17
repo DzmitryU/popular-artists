@@ -4,7 +4,7 @@
     "description": "List of most pupular songs",
     "scripts": {
         "start": "ts-node src/main.ts",
-        "start:watch": "nodemon",
+        "start:dev": "nodemon",
         "doc": "typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file"
     },
     "dependencies": {
@@ -24,6 +24,7 @@
         "wikijs": "^5.5.0"
     },
     "devDependencies": {
+        "@types/dotenv": "^6.1.1",
         "dotenv": "^8.0.0",
         "nodemon": "^1.19.1",
         "ts-node": "^7.0.1",

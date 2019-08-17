@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import ArtistsModule from './modules/artists/module';
+import ArtistsModule from './artists/artists.module';
 
 @Module({
   imports: [ArtistsModule],

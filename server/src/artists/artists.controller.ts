@@ -10,8 +10,7 @@ export default class ArtistsController {
    * Get info about artist and his most popular songs
    */
   @Get(':name')
-  async getArtistTop(@Param() params): Promise<IArtist> {
-    console.log(params.name);
-    return await this.artistsService.getArtist(params.name);
+  async getArtistTop(@Param('name') name): Promise<IArtist> {
+    return await this.artistsService.getArtist(name);
   }
 }
