@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
 
-import { IArtist, ITrack } from '../types';
 import SpotifyService from './spotify';
 import WikiService from './wiki';
+import IArtist from '../interfaces/artist.interface';
+import ITrack from '../interfaces/track.interface';
 
 @Injectable()
 export default class ArtistsService {
