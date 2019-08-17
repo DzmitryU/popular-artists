@@ -1,7 +1,7 @@
 import { Controller, Get, Param } from '@nestjs/common';
 
-import ArtistsService from './services';
 import IArtist from './interfaces/artist.interface';
+import ArtistsService from './services/artists.service';
 
 @Controller('top')
 export default class ArtistsController {

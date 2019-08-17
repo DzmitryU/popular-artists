@@ -1,3 +1,4 @@
+import { Injectable } from '@nestjs/common';
 import * as SpotifyWebApi from 'spotify-web-api-node';
 import { get } from 'lodash';
 import * as config from 'config';
@@ -10,6 +11,7 @@ const spotifyConfig: ISpotifyConfig = config.get('spotify');
 /**
  * Service for getting data from Spotify
  */
+@Injectable()
 export default class SpotifyService {
   constructor() {
     this.spotify = new SpotifyWebApi(

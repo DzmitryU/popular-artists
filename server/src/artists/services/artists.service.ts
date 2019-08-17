@@ -1,31 +1,23 @@
 import { Injectable } from '@nestjs/common';
 
-import SpotifyService from './spotify';
-import WikiService from './wiki';
 import IArtist from '../interfaces/artist.interface';
 import ITrack from '../interfaces/track.interface';
+import WikiService from './wiki.service';
+import SpotifyService from './spotify.service';
 
 @Injectable()
 export default class ArtistsService {
-  constructor() {
+  constructor(
+    private wikiService: WikiService,
+    private spotifyService: SpotifyService,
+  ) {
     this.artistNamesCache = [];
-    this.spotifyService = new SpotifyService();
-    this.wikiService = new WikiService();
   }
 
   /**
    * Cache for artist names from S3
    */
   artistNamesCache: string[];
-  /**
-   * Service for fetching data from Spotify
-   */
-  spotifyService: SpotifyService;
-
-  /**
-   * Service for fetching data from Wikipedia
-   */
-  wikiService: WikiService;
 
   async getArtist(name: string): Promise<IArtist> {
     const artistInfo: string = await this.wikiService.getArtistInfo(name);
