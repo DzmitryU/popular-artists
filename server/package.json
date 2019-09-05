@@ -3,7 +3,9 @@
     "version": "0.0.1",
     "description": "List of most pupular songs",
     "scripts": {
-        "start": "ts-node src/main.ts",
+        "start": "node dist/server.js",
+        "build": "tsc",
+        "postinstall": "npm run build",
         "start:dev": "nodemon",
         "doc": "typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file"
     },
