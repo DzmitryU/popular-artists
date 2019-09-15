@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "List of most pupular songs",
     "scripts": {
-        "start": "node dist/server.js",
+        "start": "node dist/main.js",
         "build": "rm -rf dist | tsc",
         "start:dev": "nodemon",
         "doc": "rm -rf docs | typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file",
