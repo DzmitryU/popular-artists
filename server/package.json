@@ -4,17 +4,17 @@
     "description": "List of most pupular songs",
     "scripts": {
         "start": "node dist/server.js",
-        "build": "tsc",
-        "start": "node dist/main.js",
+        "build": "rm -rf dist | tsc",
         "start:dev": "nodemon",
-        "doc": "typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file",
-        "prestart:prod": "npm run build",
+        "doc": "rm -rf docs | typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file",
+        "prestart:prod": "npm run build | npm run doc",
         "postinstall": "npm run prestart:prod"
     },
     "dependencies": {
         "@nestjs/common": "^6.5.3",
         "@nestjs/core": "^6.5.3",
         "@nestjs/platform-express": "^6.5.3",
+        "@nestjs/serve-static": "^1.0.1",
         "@types/node": "^12.6.8",
         "body-parser": "^1.19.0",
         "config": "^3.0.1",
