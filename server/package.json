@@ -3,11 +3,11 @@
     "version": "0.0.1",
     "description": "List of most pupular songs",
     "scripts": {
-        "start": "node dist/server.js",
         "build": "tsc",
-        "postinstall": "npm run build",
+        "start": "node dist/main.js",
         "start:dev": "nodemon",
-        "doc": "typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file"
+        "doc": "typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file",
+        "prestart:prod": "npm run build"
     },
     "dependencies": {
         "@nestjs/common": "^6.5.3",
