@@ -6,7 +6,7 @@
         "start": "node dist/main.js",
         "build": "rm -rf dist | tsc",
         "start:dev": "nodemon",
-        "doc": "rm -rf docs | typedoc --out docs src --exclude **/src/**/*.spec.ts --mode file",
+        "doc": "rm -rf docs | typedoc src",
         "prestart:prod": "npm run build | npm run doc",
         "postinstall": "npm run prestart:prod"
     },
@@ -15,6 +15,7 @@
         "@nestjs/core": "^6.5.3",
         "@nestjs/platform-express": "^6.5.3",
         "@nestjs/platform-fastify": "^6.6.7",
+        "@nestjs/serve-static": "^1.0.1",
         "@types/node": "^12.6.8",
         "body-parser": "^1.19.0",
         "config": "^3.0.1",
