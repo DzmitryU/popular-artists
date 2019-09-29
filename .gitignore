@@ -1,5 +1,6 @@
 server/node_modules
 server/public
+server/docs
 server/.env
 server/dist
 .idea
