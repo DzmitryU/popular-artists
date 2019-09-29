@@ -16,7 +16,6 @@ async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
   app.useStaticAssets({
     root: join(__dirname, '../docs'),
-    prefix: '/docs/',
   });
   await app.listen(PORT, '0.0.0.0');
 }
