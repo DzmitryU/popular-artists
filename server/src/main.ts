@@ -15,7 +15,7 @@ const PORT = Number(process.env.PORT) || 3000;
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
   app.useStaticAssets({
-    root: join(__dirname, '../docs'),
+    root: join(__dirname, '../public'),
   });
   await app.listen(PORT, '0.0.0.0');
 }
