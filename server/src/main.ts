@@ -18,7 +18,7 @@ async function bootstrap() {
     root: join(__dirname, '../docs'),
     prefix: '/docs/',
   });
-  await app.listen(PORT, '0.0.0.0');
+  await app.listen(PORT);
 }
 
 bootstrap();
