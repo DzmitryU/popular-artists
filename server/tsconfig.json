@@ -13,7 +13,7 @@
     },
     "typedocOptions": {
         "mode": "file",
-        "out": "public/docs",
+        "out": "docs",
         "exclude": "**/src/**/*.spec.ts"
     },
     "include": [
